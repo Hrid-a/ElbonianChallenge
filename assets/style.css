@@ -1,0 +1,198 @@
+:root {
+    /* Colors */
+    --light-clr: hsl(0, 0%, 100%);
+    --primary-clr-300: hsl(165, 34%, 50%);
+    --secondary-clr-400: hsl(165, 34%, 38%);
+    --secondary-clr-500: hsl(165, 34%, 33%);
+    --secondary-clr-700: hsl(165, 33%, 23%);
+    --secondary-clr-900: hsl(164, 33%, 13%);
+
+    --primary-hsl-value-clr: 165, 34%;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* End css Reset */
+
+body {
+    background-color: var(--primary-clr-300);
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+main {
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+main .card {
+    font-size: 1.3rem;
+}
+
+ul div {
+    border: 2px solid red;
+}
+
+ul {
+    border-radius: 6px;
+    padding: 1.6rem;
+    margin: 1em;
+    display: grid;
+    gap: .8em;
+}
+
+li {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.icons {
+    background-color: transparent;
+    border: 0;
+    font-size: 1rem;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.trash-icon {
+    color: red;
+    cursor: pointer;
+}
+
+.edit-icon {
+    color: var(--secondary-clr-400);
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 3px .656rem;
+    border: 0;
+    border-radius: 6px;
+    outline-color: transparent;
+}
+
+input:focus {
+    background-color: hsl(var(--primary-hsl-value-clr), 90%);
+}
+
+.btn {
+    cursor: pointer;
+    background-color: var(--secondary-clr-700);
+    color: var(--light-clr);
+    font-size: 2rem;
+    font-weight: 700;
+    border: 0;
+    border-radius: 6px;
+}
+
+/* Modal Window */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    /* height: 50%; */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close-icon {
+    cursor: pointer;
+    width: fit-content;
+    padding-inline: 10px;
+    margin-left: auto;
+    font-size: 1.5rem;
+    color: var(--light-clr);
+}
+
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+
+.modal.show {
+    display: block;
+}
+
+.option {
+    cursor: pointer;
+    background-color: var(--light-clr);
+}
+
+/*Modal window End  */
